@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const gutils = require('gulp-util');
 const webserver = require('gulp-webserver');
 const babel = require('gulp-babel');
 
@@ -11,10 +12,14 @@ gulp.task('webserver', () => {
     }));
 });
 
-gulp.task('default', () => {
-  return gulp.src('src/app.js')
-  .pipe(babel({
-    presets: ['es2015']
-  }))
-  .pipe(gulp.dest('dist'));
+// gulp.task('default', () => {
+//   return gulp.src('src/app.js')
+//   .pipe(babel({
+//     presets: ['es2015']
+//   }))
+//   .pipe(gulp.dest('dist'));
+// });
+
+gulp.task('default', function() {
+  return gutil.log('Gulp is running!')
 });

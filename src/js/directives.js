@@ -1,12 +1,12 @@
 (function () {
   angular.module('sw')
-  .directive('swWelcome', swWelcome);
+  .directive('swHeader', swHeader);
 
-  function swWelcome() {
+  function swHeader() {
     return {
       restrict: 'E',
       scope: {},
-      templateUrl: '/partials/welcome.html',
+      templateUrl: '/partials/header.html',
       controller: 'mainCtrl',
     }
   }
