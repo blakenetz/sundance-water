@@ -2,11 +2,11 @@
   angular.module('sw')
   .directive('swHeader', swHeader);
 
-  function swHeader() {
+  function swLandingPage() {
     return {
       restrict: 'E',
       scope: {},
-      templateUrl: '/partials/header.html',
+      templateUrl: '/partials/landingPage.html',
       controller: 'mainCtrl',
     }
   }

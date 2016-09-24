@@ -3,6 +3,7 @@ const webserver = require('gulp-webserver');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+const sass = require('gulp-sass');
 
 gulp.task('default', () => {
   gulp.src('./src/js/*.js')
@@ -11,6 +12,9 @@ gulp.task('default', () => {
       presets: ['es2015']
     }))
     // .pipe(uglify())
+    .pipe(gulp.dest('./dist/'));
+  gulp.src('./src/stylesheets/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./dist/'));
   gulp.src('dist')
     .pipe(webserver({
