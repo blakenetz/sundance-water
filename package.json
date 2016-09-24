@@ -10,7 +10,6 @@
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
     "gulp-uglify": "^2.0.0",
-    "gulp-util": "^3.0.7",
     "gulp-webserver": "^0.9.1"
   },
   "scripts": { "start": "gulp default" },

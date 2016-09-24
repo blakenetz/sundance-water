@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const webserver = require('gulp-webserver');
 const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 
 gulp.task('default', () => {
@@ -9,6 +10,7 @@ gulp.task('default', () => {
     .pipe(babel({
       presets: ['es2015']
     }))
+    // .pipe(uglify())
     .pipe(gulp.dest('./dist/'));
   gulp.src('dist')
     .pipe(webserver({
