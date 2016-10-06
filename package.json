@@ -11,6 +11,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.10",
     "gulp-webserver": "^0.9.1"
   },
   "scripts": {

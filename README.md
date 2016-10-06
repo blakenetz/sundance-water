@@ -1,9 +1,15 @@
 # Sundance Water
 
-Source code for the Sundance Water- a Kinetico Water Systems dealer- website.
+Source code for the Sundance Water (a Kinetico Water Systems dealer) website.
 
-Specs:  
+Specs:
   * Gulp  
   * ES6 - compiled with Babel   
 
-Hosted at SundanceWater.com
+To run:
+  * $ npm start
+  * $ gulp run  
+  * $ gulp listen
+
+Currently hosted at:  
+Soon to be hosted at: SundanceWater.com
