@@ -24,13 +24,15 @@ gulp.task('run', () => {
     .pipe(gulp.dest('./dist/'));
   gulp.src('./src/stylesheets/**/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(concat('style.css'))
     .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('listen', () => {
   gulp.watch([
-    './src/stylesheets/components/*.scss',
+    './src/stylesheets/**/*.scss',
+    './src/stylesheets/*.scss',
     './src/js/*.js',
-    './src/partials/*.html'
+    './dist/partials/*.html'
   ], ['run']);
 });

@@ -4,6 +4,6 @@
 
   mainCtrl.$inject = [];
   function mainCtrl() {
-    console.log('hi');
+    console.log('mainCrtl ready');
   }
 })();

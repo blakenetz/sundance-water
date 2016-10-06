@@ -1,7 +1,7 @@
 (function () {
   angular.module('sw')
   .directive('navBar', navBar)
-  .directive('waterCloseup', waterCloseup);
+  .directive('landingPage', landingPage);
 
   function navBar() {
     return {
@@ -12,11 +12,11 @@
     }
   }
 
-  function waterCloseup() {
+  function landingPage() {
     return {
       restrict: 'E',
       scope: {},
-      templateUrl: '../partials/waterCloseup.html',
+      templateUrl: '../partials/landingPage.html',
       controller: 'mainCtrl',
     }
   }
