@@ -4,7 +4,7 @@ class LandingPage extends Component {
   render(){
     return (
       <div className="container">
-        <img src="/images/glass_splash.jpg" alt="glass of water" />
+        <img src="/src/images/glass_splash.jpg" alt="glass of water" />
       </div>
     )
   }
