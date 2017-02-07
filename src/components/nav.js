@@ -1,39 +1,49 @@
 import React, { Component } from 'react';
 
+// todo: build hamburger dropdown.
+// todo: wire nav items
+
 class Nav extends Component {
-  onClick(){
-    return (
-      let toggle = document.querySelector(".nav-toggle");
-      let menu = document.querySelector(".nav-menu");
-      toggle.classList.toggle("is-active");
-      menu.classList.toggle("is-active");
-    )
-  },
+  constructor(props){
+    super(props)
+    this.state = {isToggled: false}
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick(){
+    this.setState((prevState) => {
+      isToggled: !prevState.isToggled
+    });
+  }
 
   render(){
+    const navItems = ['Benefits', 'Testimonial', 'Plumbing and Heating Services', 'Contact']
+    const navBar = navItems.map((el, i) => {
+      return <a className="nav-item" href="javascript:void[0]" key={i}>{el}</a>
+    });
+
     return (
       <nav className="nav has-shadow">
         <div className="nav-left">
-          <figure className="image" id="logo">
-            <img className="nav-item" src="/src/images/logo.png" alt="sundance-logo" />
+          <figure className="image">
+            <img  className="nav-item is-active"
+                  id="logo"
+                  src="/src/images/logo.png"
+                  alt="sundance-logo" />
           </figure>
         </div>
-        <div className="nav-toggle">
-          <span className="">TESTING</span>
-          <span className="">FART</span>
-          <span className="">BUTT</span>
-        </div>
-        <div className="nav-right nav-menu">
-          <a className="nav-item is-tab is-active" href="javascript:void[0]">Home</a>
-          <a className="nav-item is-tab" href="javascript:void[0]">Benefits of Purified Water</a>
-          <a className="nav-item is-tab" href="javascript:void[0]">Why Kenetico</a>
-          <a className="nav-item is-tab" href="javascript:void[0]">Testimonials</a>
-          <a className="nav-item is-tab" href="javascript:void[0]">Plumbing and Heating Services</a>
-          <a className="nav-item is-tab" href="javascript:void[0]">Contact Us</a>
+
+        <div className="nav-right nav-menu">{ navBar }</div>
+
+        <div className="nav-toggle" onClick={ this.handleClick }>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </nav>
     )
   }
 }
+
 
 export default Nav;

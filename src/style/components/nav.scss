@@ -2,3 +2,16 @@
   height: 80px;
   width: auto;
 }
+
+.nav-right {
+  .nav-item {
+    padding: 7px;
+    &:hover {
+      border: solid 7px black;
+    }
+  }
+}
+
+.nav-toggle {
+  margin-top: 15px;
+}

@@ -1,6 +1,31 @@
 .landing-page{
-  background-image: url('/src/images/underwater_bg.jpg');
-  background-size: cover;
+  .cover-image{
+    background-image: url('/src/images/underwater_bg.jpg');
+    background-size: cover;
+    height: 500px;
+    @include flex-col;
+    justify-content: space-around;
 
-  height: 500px;
+    .catch-text{
+      @include flex-col;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .title,
+    .subtitle{
+      color: white;
+    }
+  }
+
+  .triangle{
+    position: absolute;
+    top: 50px;
+    border-bottom: 100vw solid rgba(0, 0, 0, 0.6);
+  	border-left: 400px solid transparent;
+  	border-right: 400px solid transparent;
+  	height: 0;
+  	width: 100vw;
+  }
+
 }
