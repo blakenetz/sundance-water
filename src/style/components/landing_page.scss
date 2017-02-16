@@ -1,30 +1,30 @@
 .landing-page{
-  @include flex-center;
-  background-image: url('/src/images/underwater_bg.jpg');
-  background-size: cover;
-  width: 1200px;
-  height: 560px;
-  margin-left: 40px;
-  margin-right: 40px;
+  .landing-page-inner{
+    @include flex-center;
+    background-image: url('/src/images/underwater_bg.jpg');
+    background-size: cover;
+    max-width: 1200px;
+    height: 560px;
 
-  .landing-text{
-    max-width: 700px;
-    color: white;
-    font-family: $landing-font;
-    font-weight: 400;
-  }
-  .accent{
-    font-family: $accent;
-    color: white;
-  }
+    .landing-text{
+      max-width: 700px;
+      color: white;
+      font-family: $landing-font;
+      font-weight: 400;
+    }
+    .accent{
+      font-family: $accent;
+      color: white;
+    }
 
-  .landing-request{
-    padding-top: 20px;
-    a {
+    .landing-request {
       @extend .landing-text;
-      margin-left: -190px;
-      text-decoration: underline;
+      padding-top: 20px;
+      a {
+        color: white;
+        font-family: $landing-font;
+        text-decoration: underline;
+      }
     }
   }
-
 }
