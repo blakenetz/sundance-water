@@ -3,15 +3,22 @@
   width: auto;
 }
 
-.nav-right {
-  .nav-item {
-    padding: 7px;
-    &:hover {
-      border: solid 7px black;
+.nav{
+  padding-left: 20px;
+  padding-right: 30px;
+
+  .nav-right {
+    .nav-item {
+      padding-left: 10px;
+      &:hover {
+        text-decoration: underline;
+        font-family: $accent;
+        font-weight: bold;
+      }
     }
   }
-}
 
-.nav-toggle {
-  margin-top: 15px;
+  .nav-toggle {
+    margin-top: 15px;
+  }
 }

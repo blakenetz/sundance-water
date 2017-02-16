@@ -1,5 +1,6 @@
-@mixin flex-col {
+@mixin flex-center {
   display: flex;
-  flex-flow: column nowrap;
   align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
