@@ -40,7 +40,10 @@ class Nav extends Component {
   render(){
     const navItems = ['Benefits', 'Testimonial', 'Plumbing and Heating Services', 'Contact']
     const navBar = navItems.map((el, i) => {
-      return <a className="nav-item" href="javascript:void[0]" key={i}>{el}</a>
+
+      return el == 'Plumbing and Heating Services'
+      ? <a className="nav-item ph" href="javascript:void[0]" key={i}>{el}</a>
+      : <a className="nav-item" href="javascript:void[0]" key={i}>{el}</a>
     });
     let classHide = this.state.isHide ? "hide" : ""
 
