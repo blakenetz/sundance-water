@@ -1,0 +1,15 @@
+.benefits{
+	border-bottom: 30vw solid #FFC082;
+	border-left: 100vw solid transparent;
+  margin-top: -250px;
+  z-index: 1;
+
+  .benefits-inner{
+    width: 100vw;
+    z-index: 10;
+    position: absolute;
+    .column{
+      text-align: center;
+    }
+  }
+}

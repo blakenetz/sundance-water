@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Nav from './components/nav';
 import LandingPage from './components/landing_page';
+import Benefits from './components/benefits';
 
 require('./style/style.scss')
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
       <div>
         <Nav />
         <LandingPage />
+        <Benefits />
       </div>
     );
   }
