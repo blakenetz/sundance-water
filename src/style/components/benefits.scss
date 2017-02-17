@@ -1,15 +1,24 @@
 .benefits{
-	border-bottom: 30vw solid #FFC082;
-	border-left: 100vw solid transparent;
-  margin-top: -250px;
-  z-index: 1;
+	.diagonal{
+		height: 100px;
+		width: 100vw;
+		margin-top: -50px;
+		background-color: #FFC082;
+		transform: rotate(4deg);
+	}
 
   .benefits-inner{
     width: 100vw;
-    z-index: 10;
-    position: absolute;
+		background-color: #FFC082;
+		margin-top: -50px;
+		padding-top: 50px;
     .column{
       text-align: center;
     }
+
+		.benefit-icon{
+			max-width: 150px;
+			height: auto;
+		}
   }
 }
