@@ -6,6 +6,7 @@ class Benefits extends Component {
     super(props)
     this.state = { showDetails: false }
     this.handleClick = this.handleClick.bind(this)
+    this.benefits = this.props.categories
   }
 
   handleClick(){
@@ -13,32 +14,21 @@ class Benefits extends Component {
   }
 
   render(){
+    let benefitCat = this.benefits.map((el, i) => {
+      return (
+        <div className={el.title + " column is-one-third"} onClick={this.handleClick} key={"benefit-"+i}>
+          <h2 className="title is-3"><span className="accent">{el.title}</span> Benefits</h2>
+          <figure className="benefit-icon">
+            <img src={"/src/images/" + el.title + "-bene-icon.png"} alt={el.alt} />
+          </figure>
+        </div>
+      )
+    })
     return (
       <div className="benefits">
         <div className="diagonal"></div>
         <div className="benefits-inner columns">
-
-          <div className="eco column is-one-third" onClick={this.handleClick}>
-            <h2 className="title is-3"><span className="accent">Eco</span> Benefits</h2>
-            <figure className="benefit-icon">
-              <img src="/src/images/sprout.png" alt="hands holding a sappling" />
-            </figure>
-          </div>
-
-          <div className="health column is-one-third" onClick={this.handleClick}>
-            <h2 className="title is-3"><span className="accent">Health</span> Benefits</h2>
-            <figure className="benefit-icon">
-              <img src="/src/images/doctor.png" alt="standing doctor" />
-            </figure>
-          </div>
-
-          <div className="taste column is-one-third" onClick={this.handleClick}>
-            <h2 className="title is-3"><span className="accent">Taste</span> Benefits</h2>
-            <figure className="benefit-icon">
-              <img src="/src/images/salad.png" alt="standing doctor" />
-            </figure>
-          </div>
-
+          {benefitCat}
         </div>
         { this.state.showDetails ? <BenefitDetails /> : null }
       </div>
