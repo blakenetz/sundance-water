@@ -10,7 +10,7 @@
     .landing-text{
       max-width: 700px;
       color: white;
-      font-family: $landing-font;
+      font-family: $main;
       font-weight: 400;
     }
     .accent{
@@ -23,7 +23,7 @@
       padding-top: 20px;
       a {
         color: white;
-        font-family: $landing-font;
+        font-family: $main;
         text-decoration: underline;
       }
     }
