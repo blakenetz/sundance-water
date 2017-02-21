@@ -5,19 +5,15 @@ import Nav from './components/nav';
 import LandingPage from './components/landing_page';
 import Benefits from './components/benefits';
 
+require('./style/style.scss');
+
 class App extends Component {
   render() {
-    const benefitsCategories = [
-      {title: 'Health', alt: 'standing doctor'},
-      {title: 'Eco', alt: 'hands holding a sprout'},
-      {title: 'taste', alt: 'bowl of salad'}
-    ]
-
     return (
       <div>
         <Nav />
         <LandingPage />
-        <Benefits categories={benefitsCategories} />
+        <Benefits />
       </div>
     );
   }

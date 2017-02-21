@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class BenefitDetails extends Component {
-
   render(){
     return (
-      <div className="ben-details">
-        <p>hiiii</p>
+      <div className="bene-details">
+        <p>hiiiii</p>
       </div>
     )
   }
