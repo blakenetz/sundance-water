@@ -19,11 +19,11 @@ class HealthFacts extends Component {
             <dt>What's even more scary is 25% of the time, bottle water is simply bottle tap water.</dt>
             <dt>It's been said that your body is 60% water. Why not opt for purified water?</dt>
           </dl>
-          <summary>
-            <small><cite>"A Rising Tide of Contaminants." New York Times, 25 Feb 2014</cite></small>
-            <small><cite>"Scientists trace cancer-causing chemical in drinking water back to methadone." PBS, 27 May 2015</cite></small>
+          <footer>
+            <small><cite>"A Rising Tide of Contaminants." New York Times, 25 Feb 2014</cite></small><br />
+            <small><cite>"Scientists trace cancer-causing chemical in drinking water back to methadone." PBS, 27 May 2015</cite></small><br />
             <small><cite>"The Truth About Tap." NRDC, 05 Jan 2016</cite></small>
-          </summary>
+          </footer>
         </div>
       </article>
     )

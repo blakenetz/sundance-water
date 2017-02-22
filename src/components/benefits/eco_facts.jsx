@@ -14,9 +14,9 @@ class EcoFacts extends Component {
             <dt>And it's estimated that only 20% of all bottled water is recycled.</dt>
             <dt>It's safe to say the Earth will thank you for making the switch to a Sundance purified water system.</dt>
           </dl>
-          <summary>
+          <footer>
             <small><cite>"Bottled Water and Energy Fact Sheet." <i>Pacific Institute</i>, Feb 2007</cite></small>
-          </summary>
+          </footer>
         </div>
       </article>
     )

@@ -44,13 +44,13 @@ class Benefits extends Component {
     return (
       <div className="benefits">
         <div className="diagonal"></div>
-        <div className="benefits-inner columns">
+        <div className="benefits-inner columns is-multiline">
           {benefits}
+          { this.state.targetBenefit == 'Eco' ? <EcoFacts  benefit={this.state.targetBenefit} /> : null }
+          { this.state.targetBenefit == 'Health' ? <HealthFacts  benefit={this.state.targetBenefit} /> : null }
+          { this.state.targetBenefit == 'Taste' ? <TasteFacts  benefit={this.state.targetBenefit} /> : null }
+          { this.state.targetBenefit == 'Touch' ? <TouchFacts  benefit={this.state.targetBenefit} /> : null }
         </div>
-        { this.state.targetBenefit == 'Eco' ? <EcoFacts  benefit={this.state.targetBenefit} /> : null }
-        { this.state.targetBenefit == 'Health' ? <HealthFacts  benefit={this.state.targetBenefit} /> : null }
-        { this.state.targetBenefit == 'Taste' ? <TasteFacts  benefit={this.state.targetBenefit} /> : null }
-        { this.state.targetBenefit == 'Touch' ? <TouchFacts  benefit={this.state.targetBenefit} /> : null }
       </div>
     )
   }
