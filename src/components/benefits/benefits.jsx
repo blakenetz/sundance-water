@@ -43,7 +43,6 @@ class Benefits extends Component {
 
     return (
       <div className="benefits">
-        <div className="diagonal"></div>
         <div className="benefits-inner columns is-multiline">
           {benefits}
           { this.state.targetBenefit == 'Eco' ? <EcoFacts  benefit={this.state.targetBenefit} /> : null }
