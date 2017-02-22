@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Nav from './components/nav';
 import LandingPage from './components/landing_page';
-import Benefits from './components/benefits';
+import Benefits from './components/benefits/benefits';
 
 require('./style/style.scss');
 
