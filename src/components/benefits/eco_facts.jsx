@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 class EcoFacts extends Component {
   render(){
     return (
-      <article className="columns benefit-details" id={this.props.benefit}>
-        <div className="column is-10 is-offset-1 benefit-details-inner">
+      <article className="column benefit-details" id={this.props.benefit.toLowerCase()}>
           <h2 className="title is-2"><span className="accent">{this.props.benefit}</span> Benefits</h2>
           <dl>
             <dt>The bottle water industry relies heavily on oil for every step of the bottles lifecycle.</dt>
@@ -17,7 +16,6 @@ class EcoFacts extends Component {
           <footer>
             <small><cite>"Bottled Water and Energy Fact Sheet." <i>Pacific Institute</i>, Feb 2007</cite></small>
           </footer>
-        </div>
       </article>
     )
   }

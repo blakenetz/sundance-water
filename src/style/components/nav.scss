@@ -12,12 +12,7 @@
       padding-left: 10px;
       &:hover {
         text-decoration: underline;
-        font-family: $accent;
         font-weight: bold;
-        padding-left: 17px;
-      }
-      &.ph:hover{
-        padding-left: 32px;
       }
     }
   }

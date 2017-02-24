@@ -3,37 +3,33 @@
     width: 100vw;
 		background-color: #ffffff;
 		padding-top: 50px;
-    .column{
-			@include flex-center;
-			z-index: 3;
-      text-align: center;
-			font-family: $main
+
+    .benefit {
+      @include flex-center;
     }
 
-		.benefit-icon{
-			max-width: 150px;
-			height: auto;
-		}
+    .benefit-icon{
+      max-width: 150px;
+      height: auto;
+    }
+
+    .benefit-details{
+      max-width: 1200px;
+      text-align: left;
+      font-family: $main;
+
+  		footer{
+  			text-align: right;
+  			padding-top: 30px;
+  		}
+  		.bene-list-item{
+  			list-style: circle;
+  			margin-left: 30px;
+
+  			&.last{
+  				padding-bottom: 15px;
+  			}
+  		}
+    }
   }
-}
-
-.benefit-details{
-  @include flex-column;
-  max-width: 1200px;
-  text-align: left;
-
-	.benefit-details-inner {
-		footer{
-			text-align: right;
-			padding-top: 30px;
-		}
-		.bene-list-item{
-			list-style: circle;
-			margin-left: 30px;
-
-			&.last{
-				padding-bottom: 15px;
-			}
-		}
-	}
 }

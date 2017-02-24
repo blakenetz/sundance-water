@@ -38,12 +38,10 @@ class Nav extends Component {
   }
 
   render(){
-    const navItems = ['Benefits', 'Testimonial', 'Plumbing and Heating Services', 'Contact']
+    const navItems = ['Benefits', 'Why Kinetico', 'Testimonial', 'Plumbing and Heating Services', 'Contact']
     const navBar = navItems.map((el, i) => {
-
-      return el == 'Plumbing and Heating Services'
-      ? <a className="nav-item ph" href="javascript:void[0]" key={i}>{el}</a>
-      : <a className="nav-item" href="javascript:void[0]" key={i}>{el}</a>
+      let id = "#" + el.toLowerCase().replace(' ', '-')
+      return <a className="nav-item" href={id} key={i}>{el}</a>
     });
     let classHide = this.state.isHide ? "hide" : ""
 
