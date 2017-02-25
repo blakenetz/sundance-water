@@ -6,6 +6,7 @@ import LandingPage from './components/landing_page';
 import Benefits from './components/benefits/benefits';
 import WhyKinetico from './components/why_kinetico';
 
+
 require('./style/style.scss');
 
 class App extends Component {

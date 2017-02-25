@@ -7,7 +7,7 @@ class Benefit extends Component {
         <h2 className="title is-3"><span className="accent">{this.props.name}</span> Benefits</h2>
         <figure className="benefit-icon">
           <a href={"/#" + this.props.name.toLowerCase()}>
-            <img src={"/src/images/" + this.props.name + "-bene-icon.png"} alt={this.props.imgAlt} />
+            <img src={"/src/images/" + this.props.name + "-bene-icon.png"} alt={this.props.alt} />
           </a>
         </figure>
       </section>

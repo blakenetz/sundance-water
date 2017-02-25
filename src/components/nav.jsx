@@ -11,10 +11,10 @@ class Nav extends Component {
       isHiden: false
     }
     this.handleClick = this.handleClick.bind(this)
-    this.hideBar = this.hideBar.bind(this)
+    this.hideBurger = this.hideBurger.bind(this)
   }
 
-  hideBar(){
+  hideBurger(){
     let {isHiden} = this.state
     window.scrollY > this.prev
     ? !isHiden && this.setState({isHiden:true})
@@ -30,11 +30,11 @@ class Nav extends Component {
   }
 
   componentDidMount(){
-    window.addEventListener('scroll',this.hideBar);
+    window.addEventListener('scroll',this.hideBurger);
   }
 
   componentWillUnmount(){
-    window.removeEventListener('scroll',this.hideBar);
+    window.removeEventListener('scroll',this.hideBurger);
   }
 
   render(){
@@ -46,7 +46,7 @@ class Nav extends Component {
     let classHide = this.state.isHide ? "hide" : ""
 
     return (
-      <nav className="nav">
+      <nav className="nav is-fixed-top">
         <div className="nav-left">
           <figure className="image">
             <img  className="nav-item is-active"

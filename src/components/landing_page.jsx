@@ -10,6 +10,7 @@ class LandingPage extends Component {
             Learn how purified water can improve your life.
           </h2>
           <h3 className="landing-request subtitle is-2 column is-11"><a href="#">Request your free quote now</a></h3>
+          <h4 className="landing-text subtitle is-2 column is-11">Or scroll down to learn more</h4>
         </div>
       </div>
     )

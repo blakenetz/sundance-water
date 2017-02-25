@@ -15,7 +15,7 @@ class HealthFacts extends Component {
           <dt className="bene-list-item last">And other pharmaceuticals</dt>
           <dt>To make matters worse, the EPA can't keep up with the amount of toxins it has to analyze.</dt>
           <dt>For example, Creosote (found in coal tar) hasn't undergone the EPA's health assessment.</dt>
-          <dt>What's even more scary is 25% of the time, bottle water is simply bottle tap water.</dt>
+          <dt>What's even more scary is 25% of the time, bottle water is simply bottled tap water.</dt>
           <dt>It's been said that your body is 60% water. Why not opt for purified water?</dt>
         </dl>
         <footer>

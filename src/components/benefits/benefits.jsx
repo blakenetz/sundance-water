@@ -26,7 +26,7 @@ class Benefits extends Component {
       return (
         <Benefit key={i}
                  name={benefitData.name}
-                 imgAlt={benefitData.alt}
+                 alt={benefitData.alt}
                  onClick={this.handleClick.bind(this, benefitData)} />
       )
     })
@@ -44,6 +44,7 @@ class Benefits extends Component {
     return (
       <article className="benefits columns" id="benefits">
         <div className="benefits-inner column is-10 is-offset-1 columns is-multiline">
+          <h2 className="column is-10 title is-1 header">Benefits</h2>
           {benefits}
           { this.state.targetBenefit == 'Eco' ? <EcoFacts  benefit={this.state.targetBenefit} /> : null }
           { this.state.targetBenefit == 'Health' ? <HealthFacts  benefit={this.state.targetBenefit} /> : null }

@@ -1,8 +1,9 @@
 .landing-page{
-
+  padding-top: 90px;
+  
   .landing-page-inner{
     @include flex-center;
-    background-image: url('/src/images/underwater_bg.jpg');
+    background-image: url('/src/images/underwater-bg.jpg');
     background-size: cover;
     max-width: 1200px;
     height: 560px;
