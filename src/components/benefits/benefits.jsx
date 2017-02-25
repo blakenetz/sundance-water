@@ -42,7 +42,7 @@ class Benefits extends Component {
     const benefits = this.renderBenefits(benefitMap)
 
     return (
-      <div className="benefits columns" id="benefits">
+      <article className="benefits columns" id="benefits">
         <div className="benefits-inner column is-10 is-offset-1 columns is-multiline">
           {benefits}
           { this.state.targetBenefit == 'Eco' ? <EcoFacts  benefit={this.state.targetBenefit} /> : null }
@@ -50,7 +50,7 @@ class Benefits extends Component {
           { this.state.targetBenefit == 'Taste' ? <TasteFacts  benefit={this.state.targetBenefit} /> : null }
           { this.state.targetBenefit == 'Touch' ? <TouchFacts  benefit={this.state.targetBenefit} /> : null }
         </div>
-      </div>
+      </article>
     )
   }
 }
