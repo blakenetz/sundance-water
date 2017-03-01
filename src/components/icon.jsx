@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Icon extends Component {
   render(){
     return (
-      <section className="icon column is-one-quarter" onClick={this.props.onClick}>
+      <section className="icon-wrapper column is-one-quarter" onClick={this.props.onClick}>
         <h2 className="title is-3 accent">{this.props.name}</h2>
         <figure>
           <a href={"/#" + this.props.alias}>

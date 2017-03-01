@@ -1,11 +1,6 @@
 .benefits{
 
-  .benefit {
-    @include flex-center;
-  }
-
   .benefit-details{
-    max-width: 1200px;
     text-align: left;
     font-family: $main;
 
@@ -24,9 +19,16 @@
   }
 }
 
-.icon img{
-	max-width: 150px;
-	height: auto;
+.icon-wrapper {
+  & h2 {
+    text-align: center;
+  }
+  & figure {
+    @include flex-center;
+  }
+  & img{
+	  max-width: 150px;
+  }
 }
 
 .nav{

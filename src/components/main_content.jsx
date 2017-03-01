@@ -17,21 +17,26 @@ class MainContent extends Component {
 
   renderNav(navMap){
     return navMap.map((navItem, i) => {
-      let formattedNavItem = navItem.toLowerCase().replace(' ', '-')
-      let classes = this.state.visibleNavItem == formattedNavItem ? "subtitle is-3 nav-item active" : "subtitle is-3 nav-item"
+      let classes = this.state.visibleNavItem == navItem.alias ? "subtitle is-3 nav-item active" : "subtitle is-3 nav-item"
 
       return (
         <h2 className={classes}
             key={i}
-            onClick={this.handleClick.bind(this, formattedNavItem)} >
-          <a href={"#"+formattedNavItem}>{navItem}</a>
+            onClick={this.handleClick.bind(this, navItem.alias)} >
+          <a href={"#"+navItem.alias}>{navItem.name}</a>
         </h2>
       )
     });
   }
 
   render(){
-    const navMap = ['Benefits', 'Why Kinetico', 'Testimonial', 'Plumbing and Heating Services', 'Contact'];
+    const navMap = [
+      { name: 'Benefits', alias: 'benefits'},
+      { name: 'Why Kinetico', alias: 'why-kinetico'},
+      { name: 'Testimonies', alias: 'testimonies'},
+      { name: 'Plumbing and Heating Services', alias: 'ph-services'},
+      { name: 'Contact', alias: 'contact'},
+    ];
     const Nav = this.renderNav(navMap);
     return (
       <section className='main-content'>
