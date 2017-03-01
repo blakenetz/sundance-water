@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class TasteFacts extends Component {
   render(){
     return (
-      <article className="column benefit-details" id={this.props.benefit.toLowerCase()}>
+      <article className="column is-12 benefit-details container" id={this.props.benefit.toLowerCase()}>
         <h2 className="title is-2"><span className="accent">{this.props.benefit}</span> Benefits</h2>
         <dl>
           <dt>When cooking with purified water, you don't introduce impurities to your dish.</dt>

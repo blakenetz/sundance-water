@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class EcoFacts extends Component {
   render(){
     return (
-      <article className="column benefit-details" id={this.props.benefit.toLowerCase()}>
+      <article className="column is-12 benefit-details container" id={this.props.benefit.toLowerCase()}>
           <h2 className="title is-2"><span className="accent">{this.props.benefit}</span> Benefits</h2>
           <dl>
             <dt>The bottle water industry relies heavily on oil for every step of the bottles lifecycle.</dt>

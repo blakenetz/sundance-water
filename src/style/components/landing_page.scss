@@ -1,6 +1,11 @@
 .landing-page{
-  padding-top: 90px;
-  
+  padding-bottom: 20px;
+
+  #logo{
+    height: 80px;
+    width: auto;
+  }
+
   .landing-page-inner{
     @include flex-center;
     background-image: url('/src/images/underwater-bg.jpg');
@@ -14,14 +19,9 @@
       font-family: $main;
       font-weight: 400;
     }
-    .accent{
-      font-family: $accent;
-      color: white;
-    }
 
     .landing-request {
       @extend .landing-text;
-      padding-top: 20px;
       a {
         color: white;
         font-family: $main;

@@ -1,0 +1,45 @@
+.benefits{
+
+  .benefit {
+    @include flex-center;
+  }
+
+  .benefit-details{
+    max-width: 1200px;
+    text-align: left;
+    font-family: $main;
+
+		footer{
+			text-align: right;
+			padding-top: 30px;
+		}
+		.bene-list-item{
+			list-style: circle;
+			margin-left: 30px;
+
+			&.last{
+				padding-bottom: 15px;
+			}
+		}
+  }
+}
+
+.icon img{
+	max-width: 150px;
+	height: auto;
+}
+
+.nav{
+  font: $header;
+  display: flex;
+  justify-content: space-around;
+
+  .subtitle{
+    margin-bottom: 1.5rem;
+  }
+
+  .active{
+    border: 5px solid #000;
+    padding: 20px;
+  }
+}

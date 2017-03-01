@@ -1,26 +1,37 @@
 import React, { Component } from 'react';
+import Icon from './icon';
 
 class WhyKinetico extends Component {
-  // renderReasons(reasons){
-  //   return reasons.map((reasonData, i) => {
-  //     return <Reason key={i} name={reasonData.name} />
-  //   })
-  // }
+  handleClick(data){
+    this.setState({
+      targetBenefit: data.name
+    });
+  }
+
+  renderReasons(reasons){
+    return reasons.map((reasonData, i) => {
+      return (
+        <Icon key={i}
+                 name={reasonData.name}
+                 alt={reasonData.alt}
+                 alias={reasonData.alias}
+                 onClick={this.handleClick.bind(this, reasonData)} />
+      )
+    })
+  }
 
   render(){
     const whyMap = [
-      {name: 'History', alt: 'standing doctor'},
-      {name: 'Drinking Water Stations', alt: 'hands holding a sprout'},
-      {name: 'Water Softeners', alt: 'bowl of salad'},
-      {name: 'Certificates', alt: 'skin products'}
+      {name: 'History', alt: 'handshake', alias: 'history'},
+      {name: 'Drinking Water Stations', alt: 'glass of water', alias: 'drinking-water'},
+      {name: 'Water Softeners', alt: 'water faucet', alias: 'softener'},
+      {name: 'Certificates', alt: 'award ribbon', alias: 'certificates'}
     ]
-    // const reasons = this.renderReasons(whyMap)
+    const reasons = this.renderReasons(whyMap)
 
     return(
-      <article className="why columns" id="why-kinetico">
-        <div className="why-inner column is-10 is-offset-1">
-          <h2 className="title is-1 header">Why Kinetico</h2>
-        </div>
+      <article className="why columns is-multiline" id="why-kinetico">
+        {reasons}
       </article>
     )
   }
