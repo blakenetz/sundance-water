@@ -1,9 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { fadeIn } from 'react-animations';
+import { StyleSheet, css } from 'aphrodite';
+
+const styles = StyleSheet.create({
+    fadeIn: {
+        animationName: fadeIn,
+        animationDuration: '6s'
+    }
+});
 
 class LandingPage extends Component {
   render(){
     return (
-      <div className="landing-page container">
+      <div className="landing-page container" >
         <header>
           <figure className="image">
             <img  id="logo"
@@ -11,7 +20,7 @@ class LandingPage extends Component {
                   alt="sundance-logo" />
           </figure>
         </header>
-        <div className="landing-page-inner">
+        <div className={"landing-page-inner " + css(styles.fadeIn)} >
           <div className="landing-text-wrapper">
             <h2 className="landing-text title is-2">
               <span className="accent">Water</span> is the secret to good <span className="accent">health</span>, glowing <span className="accent">skin</span>, and delicious <span className="accent">food</span>.

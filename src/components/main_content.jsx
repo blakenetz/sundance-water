@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Benefits from './benefits/benefits'
+import Benefits from './benefits'
 import WhyKinetico from './why_kinetico'
 
 class MainContent extends Component {

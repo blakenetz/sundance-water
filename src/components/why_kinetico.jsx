@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+
 import Icon from './icon';
+import History from './why/history';
 
 class WhyKinetico extends Component {
+  constructor(props){
+    super(props)
+    this.state = { targetReason: null };
+  }
   handleClick(data){
     this.setState({
-      targetBenefit: data.name
+      targetReason: data.alias
     });
   }
 
@@ -32,6 +38,7 @@ class WhyKinetico extends Component {
     return(
       <article className="why columns is-multiline" id="why-kinetico">
         {reasons}
+        { this.state.targetReason == 'history' ? <History name={this.state.targetReason} /> : null }
       </article>
     )
   }
