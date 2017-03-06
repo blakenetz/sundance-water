@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import Icon from './icon';
-import History from './why/history';
+import Details from './details';
+import whyContent from '../content/detail_content';
 
 class WhyKinetico extends Component {
   constructor(props){
@@ -10,7 +11,8 @@ class WhyKinetico extends Component {
   }
   handleClick(data){
     this.setState({
-      targetReason: data.alias
+      targetReason: data.alias,
+      targetId: data.id
     });
   }
 
@@ -28,17 +30,58 @@ class WhyKinetico extends Component {
 
   render(){
     const whyMap = [
-      {name: 'History', alt: 'handshake', alias: 'history'},
-      {name: 'Drinking Water Stations', alt: 'glass of water', alias: 'drinking-water'},
-      {name: 'Water Softeners', alt: 'water faucet', alias: 'softener'},
-      {name: 'Certificates', alt: 'award ribbon', alias: 'certificates'}
+      {
+        id: 0,
+        name: 'History',
+        alt: 'handshake',
+        alias: 'history',
+        facts: [
+          "In 1970, two engineers made history by developing a non-electric, fully automatic water treatment system.",
+          "This engineering feat quickly lead to the creation of Kinetico Incorporate.",
+          "Since then, Kinetico has become a global company, with their water experts serving over 100 countries.",
+          "Innovative technology and a strong commitment to customer satisfaction have distinguished the company and positioned Kinetico as a leader in today's ever-changing water treatment industry.",
+        ],
+        factlist: [],
+        citations: [],
+      },
+      {
+        id: 1,
+        name: 'Drinking Water Stations',
+        alt: 'glass of water',
+        alias: 'drinking-water',
+        facts: [ "[[factlist]]" ],
+        factlist: [
+          "There are eight different cartridge options, including Perfecta (a microbiological guard against unwanted bacteria) and the Mineral Plus (which reintroduces beneficial minerals)",
+          "QuickFlo Technology insures a strong flow from your faucets",
+          ""
+        ],
+        citations: [],
+      },
+      {
+        id: 2,
+        name: 'Water Softeners',
+        alt: 'water faucet',
+        alias: 'softener',
+        facts: [],
+        factlist: [],
+        citations: [],
+      },
+      {
+        id: 3,
+        name: 'Certificates',
+        alt: 'award ribbon',
+        alias: 'certificates',
+        facts: [],
+        factlist: [],
+        citations: [],
+      }
     ]
     const reasons = this.renderReasons(whyMap)
 
     return(
       <article className="why columns is-multiline" id="why-kinetico">
         {reasons}
-        { this.state.targetReason == 'history' ? <History name={this.state.targetReason} /> : null }
+        { this.state.targetReason !== null ? this.renderDetails(whyMap[this.state.targetId]) : null }
       </article>
     )
   }

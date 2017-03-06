@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 
-class Details extends Component {
-  renderFactSection(facts){
+class ContentDetails extends Component {
+  renderFactSection(facts, factlist){
     return facts.map((fact, i) => {
-      return (
-        <dt key={i}>{fact}</dt>
-      )
+      if (fact == '[[factlist]]'){
+        return (
+          factlist.map((supportingFact, i) => {
+            return (
+              <dt key={i} className="list-item">{supportingFact}</dt>
+            )
+          })
+        )
+      } else {
+        return (
+          <dt key={i}>{fact}</dt>
+        )
+      }
     })
   }
 
@@ -19,7 +29,7 @@ class Details extends Component {
 
   render(){
 
-    const facts = this.renderFactSection(this.props.facts);
+    const facts = this.renderFactSection(this.props.facts, this.props.factlist);
     const citation = this.renderCitationSection(this.props.citations);
     return (
       <article className="column is-12 details container" id={this.props.alias}>
@@ -31,4 +41,4 @@ class Details extends Component {
   }
 }
 
-export default Details;
+export default ContentDetails;

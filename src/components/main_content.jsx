@@ -1,50 +1,74 @@
 import React, { Component } from 'react';
 
-import Benefits from './benefits'
-import WhyKinetico from './why_kinetico'
+import Content from './content';
 
 class MainContent extends Component {
   constructor(props) {
     super(props)
-    this.state = { visibleNavItem: 'benefits' }
+    this.state = { visibleItem: 'benefits' }
   }
 
   handleClick(navItem){
-    this.setState({
-      visibleNavItem: navItem
-    });
+    this.setState({ visibleItem: navItem.alias });
   }
 
   renderNav(navMap){
     return navMap.map((navItem, i) => {
-      let classes = this.state.visibleNavItem == navItem.alias ? "subtitle is-3 nav-item active" : "subtitle is-3 nav-item"
+      let classes = this.state.visibleItem == navItem.alias ? "subtitle is-3 nav-item active" : "subtitle is-3 nav-item"
 
       return (
         <h2 className={classes}
             key={i}
-            onClick={this.handleClick.bind(this, navItem.alias)} >
+            onClick={this.handleClick.bind(this, navItem)} >
           <a href={"#"+navItem.alias}>{navItem.name}</a>
         </h2>
       )
     });
   }
 
+  renderSection(navItem){
+    console.log('renderSection', navItem)
+    return (
+      <Content section={navItem} onClick={this.handleClick.bind(this, navItem)} />
+    )
+  }
+
   render(){
     const navMap = [
-      { name: 'Benefits', alias: 'benefits'},
-      { name: 'Why Kinetico', alias: 'why-kinetico'},
-      { name: 'Testimonies', alias: 'testimonies'},
-      { name: 'Plumbing and Heating Services', alias: 'ph-services'},
-      { name: 'Contact', alias: 'contact'},
-    ];
+      {
+        id: 0,
+        name: 'Benefits',
+        alias: 'benefits',
+      },
+      {
+        id: 1,
+        name: 'Why Kinetico',
+        alias: 'why',
+      },
+      {
+        id: 2,
+        name: 'Testimonies',
+        alias: 'testimonies',
+      },
+      {
+        id: 3,
+        name: 'Plumbing and Heating Services',
+        alias: 'ph-services',
+      },
+      {
+        id: 4,
+        name: 'Contact',
+        alias: 'contact',
+      },
+    ]
     const Nav = this.renderNav(navMap);
+
     return (
       <section className='main-content'>
         <article className="nav container">
           {Nav}
         </article>
-        { this.state.visibleNavItem == 'benefits' ? <Benefits /> : null }
-        { this.state.visibleNavItem == 'why-kinetico' ? <WhyKinetico /> : null }
+        { this.state.visibleItem !== null ? this.renderSection(this.state.visibleItem) : null }
       </section>
     )
   }
