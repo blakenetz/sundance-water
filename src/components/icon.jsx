@@ -12,14 +12,13 @@ const styles = StyleSheet.create({
 class Icon extends Component {
   render(){
     return (
-      <section className="icon-wrapper column is-one-quarter"
-                onClick={this.props.onClick}>
-        <h2 className="title is-3 accent">{this.props.name}</h2>
+      <section className="icon-wrapper column is-one-quarter" onClick={this.props.onClick} >
         <figure className={css(styles.BounceIn)} >
           <a href={"/#" + this.props.alias}>
             <img src={"/src/images/" + this.props.alias + "-icon.png"} alt={this.props.alt} />
           </a>
         </figure>
+        <h2 className="title is-3 accent">{this.props.name}</h2>
       </section>
     )
   }

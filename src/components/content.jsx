@@ -150,9 +150,14 @@ class Content extends Component {
           alias: "drinking-water",
           facts: [ "[[factlist]]" ],
           factlist: [
-            "There ae eight different cartridge options, including Perfecta (a microbiological guard against unwanted bacteria) and the Mineral Plus (which reintroduces beneficial minerals)",
-            "QuickFlo Technology insures a strong flow from your faucets",
-            ""
+            "There are eight different cartridge options, including <strong>Perfecta</strong> (a microbiological guard against unwanted bacteria) and the <strong>Mineral Plus</strong> (which reintroduces beneficial minerals).",
+            "<strong>QuickFlo Technology</strong> ensures a strong flow from your faucets.",
+            "Our stations can produce more than 40 gallons per day.",
+            "Change filters is hassle-free with our <strong>Quick Disconnect Sanitary Filter Cartridges</strong>.",
+            "<strong>EverClean Rinse</strong> reduces maintenance costs, while extending a membrane's life. It's a win-win.",
+            "Know when to change your filter with our <strong>PureMometer Filter Life Indicator</strong> and the <strong>MACguard Filter</strong>.",
+            "<strong>Automatic System Shutdowns</strong> conserves water and saves you money.",
+            "Plus, an outstanding warranty!",
           ],
           "citations": [],
         },
@@ -161,8 +166,14 @@ class Content extends Component {
           name: "Water Softeners",
           alt: "water faucet",
           alias: "softener",
-          facts: [],
-          factlist: [],
+          facts: [ "[[factlist]]" ],
+          factlist: [
+            "Only Kinetico uses the kinetic energy of moving water to power its systems instead of electicity.",
+            "The Twin tank design allows our systems to backwash without ever going offline. This allows for around-the-clock service.",
+            "Meters determine when it's time to regenerate with pinpoint accuracy. This results in less waste and greater savings, so when you go on vacation, so does your system.",
+            "Our systems use soft, conditioned water to clean itself, which prolongs their lifespans.",
+            "Unlike other softeners, our systems regenerate from the bottom up for a more even and efficient use of resin beads.",
+          ],
           citations: [],
         },
         {
@@ -177,12 +188,10 @@ class Content extends Component {
       ],
     }
 
-    console.log('in render:', contentMap[this.state.targetSection])
-
     return (
-      <article className="benefits columns is-multiline" id="benefits">
-        { this.renderIcon(contentMap[this.state.targetSection]) }
-        { this.state.targetSubSection !== null ? this.renderDetails(contentMap[this.state.targetSection][this.state.targetId]) : null }
+      <article className="columns is-multiline icon-detail-row">
+          { this.renderIcon(contentMap[this.state.targetSection]) }
+          { this.state.targetSubSection !== null ? this.renderDetails(contentMap[this.state.targetSection][this.state.targetId]) : null }
       </article>
     )
   }

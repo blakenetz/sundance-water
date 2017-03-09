@@ -3,21 +3,34 @@
 }
 
 .details{
+  @include flex-center;
+  display: flex !important;
   text-align: left;
   font-family: $main;
+  background: $light_blue;
+  box-shadow: inset 0 1px 15px black;
 
 	footer{
 		text-align: right;
 		padding-top: 30px;
+    width: 90vw;
+    max-width: 1200px;
 	}
 	.list-item{
 		margin-left: 30px;
 	}
+
+  & h2 {
+    padding-top: 20px;
+  }
 }
 
 .icon-wrapper {
+  background: $dark_blue;
+
   & h2 {
     text-align: center;
+    padding-bottom: 25px;
   }
   & figure {
     @include flex-center;
@@ -31,13 +44,20 @@
   font: $header;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 10px !important;
+  border-bottom: 5px solid #000;
 
-  .subtitle{
-    margin-bottom: 1.5rem;
+  .block:not(:last-child), .notification:not(:last-child), .progress:not(:last-child), .subtitle:not(:last-child), .table, .title:not(:last-child){
+    margin-bottom: 0px;
   }
 
   .active{
-    border: 5px solid #000;
+    border-top: 5px solid #000;
+    border-left: 5px solid #000;
+    border-right: 5px solid #000;
     padding: 20px;
+  }
+  .navItem:not(.active){
+    border-bottom: 5px solid #000;
   }
 }

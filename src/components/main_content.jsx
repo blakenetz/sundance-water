@@ -27,7 +27,6 @@ class MainContent extends Component {
   }
 
   renderSection(navItem){
-    console.log('renderSection', navItem)
     return (
       <Content section={navItem} onClick={this.handleClick.bind(this, navItem)} />
     )
