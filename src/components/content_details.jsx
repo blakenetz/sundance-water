@@ -12,19 +12,23 @@ class ContentDetails extends Component {
     });
   }
 
+  createMarkup(htmlString){
+    return {__html: htmlString};
+  }
+
   renderFactSection(facts, factlist){
     return facts.map((fact, i) => {
       if (fact == '[[factlist]]'){
         return (
           factlist.map((supportingFact, i) => {
             return (
-              <dt key={i} className="list-item">{supportingFact}</dt>
+              <dt key={i} className="list-item" dangerouslySetInnerHTML={this.createMarkup(supportingFact)} />
             )
           })
         )
       } else {
         return (
-          <dt key={i}>{fact}</dt>
+          <dt key={i} dangerouslySetInnerHTML={this.createMarkup(fact)} />
         )
       }
     })
