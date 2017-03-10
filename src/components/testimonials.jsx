@@ -7,7 +7,8 @@ class Testimonials extends Component {
       return (
         <figure key={i}>
           <img src={"/src/images/" + testimonial.alias + "-testimonial.jpg"} alt={testimonial.customer + " family"} />
-          <figcaption className="subtitle is-3">{testimonial.customer + "of " + testimonial.location}</figcaption>
+          <figcaption className="subtitle is-3">{testimonial.customer}</figcaption>
+          <figcaption className="subtitle is-5">{testimonial.location}</figcaption>
         </figure>
       )
     })

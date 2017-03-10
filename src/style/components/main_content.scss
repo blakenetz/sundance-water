@@ -109,12 +109,26 @@
   display: flex;
   background: $dark_blue;
   font: $main;
+  margin-top: -10px;
+  width: 100%;
+  text-align: center;
+  justify-content: space-around;
 
   figure {
     @include flex-center;
+    justify-content: flex-start;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    max-width: 250px;
+
+    .subtitle{
+      margin-bottom: 0px;
+    }
   }
 
   img {
+    height: 100px;
+    width: 100px;
     border-radius: 50px;
   }
 }
