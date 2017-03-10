@@ -4,3 +4,10 @@
   flex-flow: column nowrap;
   justify-content: center;
 }
+
+@mixin detail-section {
+  font-family: $main;
+  background: $light_blue;
+  box-shadow: inset 0 1px 15px black;
+  padding-top: 50px !important;
+}

@@ -35,6 +35,7 @@ class Content extends Component {
                name={sectionData.name}
                alt={sectionData.alt}
                alias={sectionData.alias}
+               active={this.state.targetSubSection == sectionData.alias}
                onClick={this.handleClick.bind(this, sectionData)} />
       )
     })
@@ -181,8 +182,23 @@ class Content extends Component {
           name: "Certificates",
           alt: "award ribbon",
           alias: "certificates",
-          facts: [],
-          factlist: [],
+          facts: [
+            {
+              url: "http://www.nsf.org",
+              alias: "nsf",
+              name: "National Sanitation Foundation",
+            },
+            {
+              url: "http://www.biovir.com",
+              alias: "biovir",
+              name: "BioVir Laboratories",
+            },
+            {
+              url: "https://www.wqa.org",
+              alias: "wqa",
+              name: "Water Quality Association",
+            }
+          ],
           citations: [],
         }
       ],

@@ -4,11 +4,25 @@
 
 .details{
   @include flex-center;
+  @include detail-section;
   display: flex !important;
   text-align: left;
-  font-family: $main;
-  background: $light_blue;
-  box-shadow: inset 0 1px 15px black;
+
+  dl {
+    width: 90vw;
+  }
+  dt {
+    line-height: 2.25em;
+    &.list-item {
+      line-height: 1.25em;
+      padding-top: .25em;
+      padding-bottom: .25em;
+      i {
+        padding-right: .5em;
+        padding-top: .1em;
+      }
+    }
+  }
 
 	footer{
 		text-align: right;
@@ -25,12 +39,41 @@
   }
 }
 
+.details-logo {
+  @include detail-section;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .cert-wrapper{
+    width: 75vw;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  figure{
+    @include flex-center;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  img {
+    height: 150px;
+  }
+}
+
 .icon-wrapper {
   background: $dark_blue;
 
   & h2 {
     text-align: center;
     padding-bottom: 25px;
+
+    &.active{
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
   }
   & figure {
     @include flex-center;

@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
 
 class Icon extends Component {
   render(){
+    const h2Class = this.props.active ? 'title is-3 accent active' : 'title is-3 accent';
     return (
       <section className="icon-wrapper column is-one-quarter" onClick={this.props.onClick} >
         <figure className={css(styles.BounceIn)} >
@@ -18,7 +19,7 @@ class Icon extends Component {
             <img src={"/src/images/" + this.props.alias + "-icon.png"} alt={this.props.alt} />
           </a>
         </figure>
-        <h2 className="title is-3 accent">{this.props.name}</h2>
+        <h2 className={h2Class}>{this.props.name}</h2>
       </section>
     )
   }

@@ -14,7 +14,9 @@ class MainContent extends Component {
 
   renderNav(navMap){
     return navMap.map((navItem, i) => {
-      let classes = this.state.visibleItem == navItem.alias ? "subtitle is-3 nav-item active" : "subtitle is-3 nav-item"
+      let classes = this.state.visibleItem == navItem.alias
+        ? "subtitle is-3 nav-item active"
+        : "subtitle is-3 nav-item"
 
       return (
         <h2 className={classes}

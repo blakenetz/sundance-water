@@ -17,21 +17,29 @@ class ContentDetails extends Component {
   }
 
   renderFactSection(facts, factlist){
-    return facts.map((fact, i) => {
+    const content = facts.map((fact, i) => {
       if (fact == '[[factlist]]'){
         return (
           factlist.map((supportingFact, i) => {
             return (
-              <dt key={i} className="list-item" dangerouslySetInnerHTML={this.createMarkup(supportingFact)} />
+              <dt key={i} className="list-item">
+                <i className="fa fa-tint" aria-hidden="true"></i>
+                <span dangerouslySetInnerHTML={this.createMarkup(supportingFact)} />
+              </dt>
             )
           })
         )
-      } else {
+      }
+      else {
         return (
           <dt key={i} dangerouslySetInnerHTML={this.createMarkup(fact)} />
         )
       }
     })
+
+    return (
+      <dl>{content}</dl>
+    )
   }
 
   renderCitationSection(citations){
@@ -42,18 +50,36 @@ class ContentDetails extends Component {
     })
   }
 
-  render(){
-    const facts = this.renderFactSection(this.props.facts, this.props.factlist);
-    const citation = this.renderCitationSection(this.props.citations);
-    const title = ['health', 'eco', 'taste', 'touch'].includes(this.state.VisibleElement)
-      ? <h2 className="title is-2"><span className="accent">{this.props.name}</span> Benefits</h2>
-      : <h2 className="title is-2"><span className="accent">{this.props.name}</span></h2>
+  renderCertSection(certs){
+    const content = certs.map((cert, i) => {
+      return (
+        <figure key={i}>
+          <a href={cert.url}>
+            <img src={"/src/images/" + cert.alias + "-logo.png"} alt={cert.alias + " logo"} target="_blank" />
+          </a>
+          <figcaption className="subtitle is-3">{cert.name}</figcaption>
+        </figure>
+      )
+    })
 
     return (
-      <article className="column is-12 details" id={this.props.alias}>
-          {title}
-          <dl>{facts}</dl>
-          <footer>{citation}</footer>
+      <div className="cert-wrapper">{content}</div>
+    )
+  }
+
+  render(){
+    const content = this.props.alias == 'certificates'
+      ? this.renderCertSection(this.props.facts)
+      : this.renderFactSection(this.props.facts, this.props.factlist);
+    const classes = this.props.alias == 'certificates'
+      ? "columm is-12 details-logo"
+      : "column is-12 details is-multiline"
+    const citation = this.renderCitationSection(this.props.citations);
+
+    return (
+      <article className={classes} id={this.props.alias}>
+        {content}
+        <footer>{citation}</footer>
       </article>
     )
   }
