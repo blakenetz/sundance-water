@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import Content from './content';
+import IconRow from './icon_row';
+import Testimonials from './testimonials';
 
 class MainContent extends Component {
   constructor(props) {
@@ -28,9 +29,15 @@ class MainContent extends Component {
     });
   }
 
-  renderSection(navItem){
+  renderBenefitsWhySection(navItem){
     return (
-      <Content section={navItem} onClick={this.handleClick.bind(this, navItem)} />
+      <IconRow section={navItem} onClick={this.handleClick.bind(this, navItem)} />
+    )
+  }
+
+  renderTestimonialSection(){
+    return (
+      <Testimonials />
     )
   }
 
@@ -48,8 +55,8 @@ class MainContent extends Component {
       },
       {
         id: 2,
-        name: 'Testimonies',
-        alias: 'testimonies',
+        name: 'Testimonials',
+        alias: 'testimonials',
       },
       {
         id: 3,
@@ -69,7 +76,9 @@ class MainContent extends Component {
         <article className="nav container">
           {Nav}
         </article>
-        { this.state.visibleItem !== null ? this.renderSection(this.state.visibleItem) : null }
+        { (this.state.visibleItem == 'benefits' || this.state.visibleItem == 'why') ? this.renderBenefitsWhySection(this.state.visibleItem) : null }
+        { this.state.visibleItem == 'testimonials' ? this.renderTestimonialSection() : null }
+
       </section>
     )
   }

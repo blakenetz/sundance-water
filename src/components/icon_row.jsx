@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 import Icon from './icon';
-import ContentDetails from './content_details';
+import Details from './details';
 
-class Content extends Component {
+class IconRow extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -43,7 +43,7 @@ class Content extends Component {
 
   renderDetails(subSection){
     return (
-      <ContentDetails name={subSection.name}
+      <Details name={subSection.name}
                 alias={subSection.alias}
                 facts={subSection.facts}
                 factlist={subSection.factlist}
@@ -206,11 +206,11 @@ class Content extends Component {
 
     return (
       <article className="columns is-multiline icon-detail-row">
-          { this.renderIcon(contentMap[this.state.targetSection]) }
-          { this.state.targetSubSection !== null ? this.renderDetails(contentMap[this.state.targetSection][this.state.targetId]) : null }
+        { this.renderIcon(contentMap[this.state.targetSection]) }
+        { this.state.targetSubSection !== null ? this.renderDetails(contentMap[this.state.targetSection][this.state.targetId]) : null }
       </article>
     )
   }
 }
 
-export default Content;
+export default IconRow;

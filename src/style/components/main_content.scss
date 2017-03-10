@@ -104,3 +104,17 @@
     border-bottom: 5px solid #000;
   }
 }
+
+.testimonials {
+  display: flex;
+  background: $dark_blue;
+  font: $main;
+
+  figure {
+    @include flex-center;
+  }
+
+  img {
+    border-radius: 50px;
+  }
+}

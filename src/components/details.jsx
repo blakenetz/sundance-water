@@ -54,8 +54,8 @@ class ContentDetails extends Component {
     const content = certs.map((cert, i) => {
       return (
         <figure key={i}>
-          <a href={cert.url}>
-            <img src={"/src/images/" + cert.alias + "-logo.png"} alt={cert.alias + " logo"} target="_blank" />
+          <a href={cert.url} target="_blank">
+            <img src={"/src/images/" + cert.alias + "-logo.png"} alt={cert.alias + " logo"} />
           </a>
           <figcaption className="subtitle is-3">{cert.name}</figcaption>
         </figure>
