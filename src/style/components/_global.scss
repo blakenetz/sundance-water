@@ -14,3 +14,20 @@ body {
   font-family: $header;
   font-style: italic;
 }
+
+dl {
+  width: 90vw;
+}
+dt {
+  font: $main;
+  line-height: 2.25em;
+  &.list-item {
+    line-height: 1.25em;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    i {
+      padding-right: .5em;
+      padding-top: .1em;
+    }
+  }
+}

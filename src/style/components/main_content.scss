@@ -8,22 +8,6 @@
   display: flex !important;
   text-align: left;
 
-  dl {
-    width: 90vw;
-  }
-  dt {
-    line-height: 2.25em;
-    &.list-item {
-      line-height: 1.25em;
-      padding-top: .25em;
-      padding-bottom: .25em;
-      i {
-        padding-right: .5em;
-        padding-top: .1em;
-      }
-    }
-  }
-
 	footer{
 		text-align: right;
 		padding-top: 30px;
@@ -105,21 +89,31 @@
   }
 }
 
-.testimonials {
-  display: flex;
+.info-block {
   background: $dark_blue;
-  font: $main;
   margin-top: -10px;
-  width: 100%;
-  text-align: center;
-  justify-content: space-around;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .testimonial {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 1.5em;
+
+    .quote {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+
+      & > dt:last-of-type{
+        font-size: 1.2rem;
+      }
+    }
+  }
 
   figure {
-    @include flex-center;
-    justify-content: flex-start;
-    padding-bottom: 60px;
-    padding-top: 60px;
     max-width: 250px;
+    @include flex-center;
 
     .subtitle{
       margin-bottom: 0px;
@@ -130,5 +124,11 @@
     height: 100px;
     width: 100px;
     border-radius: 50px;
+  }
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
   }
 }

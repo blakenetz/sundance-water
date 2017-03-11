@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import IconRow from './icon_row';
 import Testimonials from './testimonials';
+import PH from './ph';
 
 class MainContent extends Component {
   constructor(props) {
@@ -38,6 +39,12 @@ class MainContent extends Component {
   renderTestimonialSection(){
     return (
       <Testimonials />
+    )
+  }
+
+  renderPHSection(){
+    return (
+      <PH />
     )
   }
 
@@ -78,6 +85,7 @@ class MainContent extends Component {
         </article>
         { (this.state.visibleItem == 'benefits' || this.state.visibleItem == 'why') ? this.renderBenefitsWhySection(this.state.visibleItem) : null }
         { this.state.visibleItem == 'testimonials' ? this.renderTestimonialSection() : null }
+        { this.state.visibleItem == 'ph-services' ? this.renderPHSection() : null }
 
       </section>
     )
