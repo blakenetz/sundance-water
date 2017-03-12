@@ -131,4 +131,10 @@
     text-decoration: none;
     color: inherit;
   }
+
+  form {
+    .control.is-grouped>.control.is-expanded:first-of-type {
+      flex-grow: inherit;
+    }
+  }
 }

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import IconRow from './icon_row';
 import Testimonials from './testimonials';
 import PH from './ph';
+import Contact from './contact';
 
 class MainContent extends Component {
   constructor(props) {
@@ -48,6 +49,12 @@ class MainContent extends Component {
     )
   }
 
+  renderContactSection(){
+    return (
+      <Contact />
+    )
+  }
+
   render(){
     const navMap = [
       {
@@ -86,6 +93,7 @@ class MainContent extends Component {
         { (this.state.visibleItem == 'benefits' || this.state.visibleItem == 'why') ? this.renderBenefitsWhySection(this.state.visibleItem) : null }
         { this.state.visibleItem == 'testimonials' ? this.renderTestimonialSection() : null }
         { this.state.visibleItem == 'ph-services' ? this.renderPHSection() : null }
+        { this.state.visibleItem == 'contact' ? this.renderContactSection() : null }
 
       </section>
     )
