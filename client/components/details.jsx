@@ -55,7 +55,7 @@ class ContentDetails extends Component {
       return (
         <figure key={i}>
           <a href={cert.url} target="_blank">
-            <img src={"/src/images/" + cert.alias + "-logo.png"} alt={cert.alias + " logo"} />
+            <img src={"/images/" + cert.alias + "-logo.png"} alt={cert.alias + " logo"} />
           </a>
           <figcaption className="subtitle is-3">{cert.name}</figcaption>
         </figure>

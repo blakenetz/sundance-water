@@ -11,7 +11,7 @@ class Testimonials extends Component {
       return (
         <article className="testimonial container columns"  key={i}>
           <figure className="column is-2">
-            <img src={"/src/images/" + testimonial.alias + "-testimonial.jpg"} alt={testimonial.customer + " family"} />
+            <img src={"/images/" + testimonial.alias + "-testimonial.jpg"} alt={testimonial.customer + " family"} />
           </figure>
           <dl className="column quote">
             <dt className="list-item" dangerouslySetInnerHTML={this.createMarkup(testimonial.quote)} />

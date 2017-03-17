@@ -16,7 +16,7 @@ class LandingPage extends Component {
         <header>
           <figure className="image">
             <img  id="logo"
-                  src="/src/images/logo.png"
+                  src="/images/logo.png"
                   alt="sundance-logo" />
           </figure>
         </header>
