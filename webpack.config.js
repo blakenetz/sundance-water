@@ -23,8 +23,7 @@ module.exports = {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract(
         'style',
-        'css?sourceMap!sass?sourceMap'
-      )
+        'css?sourceMap!sass?sourceMap'      )
     }]
   },
   resolve: {
@@ -35,6 +34,6 @@ module.exports = {
     contentBase: './dist'
   },
   plugins: [
-    new ExtractTextPlugin('./dist/style.css')
+    new ExtractTextPlugin('./style.css')
   ]
 };
