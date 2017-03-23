@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -10,6 +11,8 @@ const app = express();
 app.use(logger('dev'));
 
 app.use(express.static(path.join(__dirname, 'dist')));
+app.use(favicon(path.join(__dirname, 'dist/images/favicons', 'favicon.ico')));
+app.set('views', path.join(__dirname, 'dist'));
 
 app.all('*', (req, res, next) => {
     res.sendFile('index.html', {

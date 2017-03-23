@@ -1,9 +1,8 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
-const ENV = process.env.NODE_ENV;
-const DEV = ENV === 'development';
 
 module.exports = {
+  devtool: 'eval',
   entry: [
     './client/index.js'
   ],

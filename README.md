@@ -11,9 +11,9 @@ Specs:
 
 To install / run / buil:
   * $ npm install
-  * $ npm start
+  * $ npm run dev
   * visit localhost:8080
-  * $ npm build
+  * $ npm run build
 
 Currently hosted at:  
 Soon to be hosted at: SundanceWater.com

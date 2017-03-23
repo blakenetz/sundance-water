@@ -2,11 +2,11 @@
   "name": "sundance-water",
   "version": "1.0.0",
   "description": "Source code for the Sundance Water- a Kinetico Water Systems dealer- website.",
-  "main": "index.js",
+  "main": "./bin/www",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
-    "build": "node ./node_modules/webpack/bin/webpack.js --production",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
+    "start": "node ./bin/www",
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
+    "build": "node ./node_modules/webpack/bin/webpack.js --production"
   },
   "repository": {
     "type": "git",
