@@ -16,4 +16,4 @@ To install / run / buil:
   * $ npm run build
 
 Currently hosted at:  
-Soon to be hosted at: SundanceWater.com
+<!-- Soon to be hosted at: SundanceWater.com -->
