@@ -4,6 +4,7 @@ import IconRow from './icon_row';
 import Testimonials from './testimonials';
 import PH from './ph';
 import Contact from './contact';
+import MobileNav from './mobile_nav';
 
 class MainContent extends Component {
   constructor(props) {
@@ -87,6 +88,7 @@ class MainContent extends Component {
 
     return (
       <section className='main-content'>
+        <MobileNav />
         <article className="nav container">
           {Nav}
         </article>
