@@ -30,3 +30,20 @@
     }
   }
 }
+
+@media (max-width: 769px) {
+  .landing-page-inner {
+    .landing-text {
+      padding-left: 1rem;
+      &.title {
+        font-size: 2rem;
+        text-shadow: 0.1rem 0.1rem 0.1rem black;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  #logo{
+    display: none;
+  }
+}

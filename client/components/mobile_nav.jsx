@@ -16,18 +16,28 @@ class MobileNav extends Component {
   render(){
     return (
       <nav className='nav mobile-nav has-shadow'>
-        <span className="nav-right nav-menu">
+        <div className="nav-left">
+          <figure className="image">
+            <img id="mobile-logo"
+                src="/images/logo.png"
+                alt="sundance-logo" />
+          </figure>
+        </div>
+
+        <div className="nav-right nav-menu">
           <a className="nav-item">Benefits</a>
           <a className="nav-item">Why Kinetico</a>
           <a className="nav-item">Testimonials</a>
           <a className="nav-item">Plumbing and Heating</a>
           <a className="nav-item">Contact</a>
-        </span>
+        </div>
+
         <span className="nav-toggle" onClick={this.handleClick}>
           <span></span>
           <span></span>
           <span></span>
         </span>
+
 
       </nav>
     )
