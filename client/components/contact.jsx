@@ -84,7 +84,7 @@ class Contact extends Component {
   handleSubmit(e){
     e.preventDefault();
 
-    fetch('http://localhost:3000/send', {
+    fetch('/send', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
