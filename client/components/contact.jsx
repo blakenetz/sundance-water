@@ -8,21 +8,25 @@ class Contact extends Component {
   constructor(props){
     super(props)
     this.state = {
-      name: '',
+    // form inputs
+      name: 'test',
+      city: 'test',
+      email: 'test@email.com',
+      phone: 'test',
+      referenceOther: 'test',
+      reference: 'default',
+      product: 'default',
+      comments: 'test',
+    // form validation
       nameReq: false,
-      city: '',
       cityReq: false,
-      email: '',
       emailReq: false,
       emailInvalid: false,
-      phone: '',
       phoneReq: false,
       phoneInvalid: false,
-      reference: 'default',
-      referenceOther: '',
       referenceOtherVisible: false,
-      product: 'default',
-      comments: '',
+    // other
+      formSent: false,
     }
     this.handleBlur = this.handleBlur.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -80,12 +84,37 @@ class Contact extends Component {
   handleSubmit(e){
     e.preventDefault();
 
+    fetch('http://localhost:3000/send', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: this.state.name,
+        city: this.state.city,
+        email: this.state.email,
+        phone: this.state.phone,
+        reference: this.state.reference,
+        referenceOther: this.state.referenceOther,
+        product: this.state.product,
+        comments: this.state.comments,
+      })
+    })
+      .then((response) => response.json())
+      .then((responseJson) => {
+        if (responseJson.success) this.setState({formSent: true})
+        else this.setState({formSent: false})
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   render(){
     return (
       <article className="info-block">
-        <form className="container" onSubmit={this.handleSubmit}>
+        <form className="container" onSubmit={this.handleSubmit} >
 
           <p className="control has-icon">
             <input className="input"
