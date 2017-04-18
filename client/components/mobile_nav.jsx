@@ -38,7 +38,6 @@ class MobileNav extends Component {
           <span></span>
         </span>
 
-
       </nav>
     )
   }

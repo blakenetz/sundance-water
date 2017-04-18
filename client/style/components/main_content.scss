@@ -66,3 +66,34 @@
 	  max-width: 150px;
   }
 }
+
+@media (max-width: 795px) {
+  .icon-wrapper h2.title {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 685px) {
+  .icon-wrapper {
+    img {
+      max-width: 120px;
+    }
+    h2.title {
+      font-size: 1.6em;
+    }
+  }
+}
+@media (max-width: 555px) {
+  .icon-wrapper h2.title {
+      font-size: 1.4em;
+  }
+}
+@media (max-width: 495px) {
+  .icon-wrapper {
+    img {
+      max-width: 100px;
+    }
+    h2.title {
+      font-size: 1.2em;
+    }
+  }
+}

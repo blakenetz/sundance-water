@@ -9,14 +9,14 @@ class Contact extends Component {
     super(props)
     this.state = {
     // form inputs
-      name: 'test',
-      city: 'test',
-      email: 'test@email.com',
-      phone: 'test',
-      referenceOther: 'test',
+      name: '',
+      city: '',
+      email: '',
+      phone: '',
+      referenceOther: '',
       reference: 'default',
       product: 'default',
-      comments: 'test',
+      comments: '',
     // form validation
       nameReq: false,
       cityReq: false,

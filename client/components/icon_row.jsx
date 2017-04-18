@@ -205,7 +205,7 @@ class IconRow extends Component {
     }
 
     return (
-      <article className="columns is-multiline icon-detail-row">
+      <article className="columns is-multiline icon-detail-row is-mobile">
         { this.renderIcon(contentMap[this.state.targetSection]) }
         { this.state.targetSubSection !== null ? this.renderDetails(contentMap[this.state.targetSection][this.state.targetId]) : null }
       </article>

@@ -38,24 +38,6 @@ class MainContent extends Component {
     )
   }
 
-  renderTestimonialSection(){
-    return (
-      <Testimonials />
-    )
-  }
-
-  renderPHSection(){
-    return (
-      <PH />
-    )
-  }
-
-  renderContactSection(){
-    return (
-      <Contact />
-    )
-  }
-
   render(){
     const navMap = [
       {
@@ -93,9 +75,9 @@ class MainContent extends Component {
           {Nav}
         </article>
         { (this.state.visibleItem == 'benefits' || this.state.visibleItem == 'why') ? this.renderBenefitsWhySection(this.state.visibleItem) : null }
-        { this.state.visibleItem == 'testimonials' ? this.renderTestimonialSection() : null }
-        { this.state.visibleItem == 'ph-services' ? this.renderPHSection() : null }
-        { this.state.visibleItem == 'contact' ? this.renderContactSection() : null }
+        { this.state.visibleItem == 'testimonials' ? <Testimonials /> : null }
+        { this.state.visibleItem == 'ph-services' ? <PH /> : null }
+        { this.state.visibleItem == 'contact' ? <Contact /> : null }
 
       </section>
     )
