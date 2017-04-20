@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
   devtool: 'eval',
   entry: [
-    './client/index.js'
+    './client/index.jsx'
   ],
   output: {
     path: `${__dirname}/dist/`,

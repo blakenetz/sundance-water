@@ -82,18 +82,23 @@
     }
   }
 }
-@media (max-width: 555px) {
+@media (max-width: 615px) {
   .icon-wrapper h2.title {
       font-size: 1.4em;
+  }
+}
+@media (max-width: 550px) {
+  .icon-wrapper h2.title {
+      font-size: 1.25em;
   }
 }
 @media (max-width: 495px) {
   .icon-wrapper {
     img {
-      max-width: 100px;
+      max-width: 90px;
     }
     h2.title {
-      font-size: 1.2em;
+      font-size: 0.95em;
     }
   }
 }
