@@ -19,8 +19,7 @@ class App extends Component {
   }
 
   changeVisItem(newItem){
-    console.log('changeVisItem', newItem)
-    this.setState({ visItem: newItem });
+    this.setState({ visItem: newItem.navitem });
   }
 
   handleClick(e){

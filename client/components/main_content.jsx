@@ -41,7 +41,6 @@ class MainContent extends Component {
   }
 
   renderSubsection(section){
-    console.log('renderSubsection', section)
     if (section == 'testimonials') return <Testimonials />
     if (section == 'ph-services') return <PH />
     if (section == 'contact') return <Contact />
