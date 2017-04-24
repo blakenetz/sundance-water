@@ -10,22 +10,29 @@ require('./style/style.scss');
 class App extends Component {
   constructor(props){
     super(props)
-    this.state = { dismissNav: false }
+    this.state = {
+      dismissNav: false,
+      visItem: 'benefits',
+    }
     this.handleClick = this.handleClick.bind(this)
+    this.changeVisItem = this.changeVisItem.bind(this)
+  }
+
+  changeVisItem(newItem){
+    console.log('changeVisItem', newItem)
+    this.setState({ visItem: newItem });
   }
 
   handleClick(e){
-    this.setState((prevState, currProps) => {
-      return { ...prevState, dismissNav: true }
-    })
+    this.setState({ dismissNav: true })
   }
 
   render() {
     return (
       <div onClick={this.handleClick}>
-        <MobileNav dismissNav={this.state.dismissNav} />
+        <MobileNav dismissNav={this.state.dismissNav} onChangeNavItem={this.changeVisItem} />
         <LandingPage />
-        <MainContent />
+        <MainContent visItem={this.state.visItem} />
       </div>
     );
   }

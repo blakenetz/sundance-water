@@ -8,16 +8,25 @@ import Contact from './contact';
 class MainContent extends Component {
   constructor(props) {
     super(props)
-    this.state = { visibleItem: 'benefits' }
+    this.state = { visItem: this.props.visItem }
   }
 
-  handleClick(navItem){
-    this.setState({ visibleItem: navItem.alias });
+  componentWillReceiveProps(){
+    const navMap = this.returnNavMap();
+    this.setState((prevState, currProps) => {
+      return { ...prevState, visItem: currProps.visItem };
+    });
   }
 
-  renderNav(navMap){
+  handleClick(navItem, e){
+    e.stopPropagation()
+    this.setState({visItem: navItem.alias})
+  }
+
+  renderNav(){
+    const navMap = this.returnNavMap();
     return navMap.map((navItem, i) => {
-      let classes = this.state.visibleItem == navItem.alias
+      let classes = this.state.visItem == navItem.alias
         ? "subtitle is-3 nav-item active"
         : "subtitle is-3 nav-item"
 
@@ -31,13 +40,17 @@ class MainContent extends Component {
     });
   }
 
-  renderBenefitsWhySection(navItem){
-    return (
-      <IconRow section={navItem} onClick={this.handleClick.bind(this, navItem)} />
+  renderSubsection(section){
+    console.log('renderSubsection', section)
+    if (section == 'testimonials') return <Testimonials />
+    if (section == 'ph-services') return <PH />
+    if (section == 'contact') return <Contact />
+    if (section == 'benefits' || section == 'why') return (
+      <IconRow section={section} onClick={this.handleClick.bind(this, section)} />
     )
   }
 
-  render(){
+  returnNavMap(){
     const navMap = [
       {
         id: 0,
@@ -65,17 +78,18 @@ class MainContent extends Component {
         alias: 'contact',
       },
     ]
-    const Nav = this.renderNav(navMap);
+    return navMap;
+  }
+
+  render(){
+    const navMap = this.returnNavMap();
 
     return (
       <section className='main-content'>
         <article className="nav container">
-          {Nav}
+          { this.renderNav(navMap) }
         </article>
-        { (this.state.visibleItem == 'benefits' || this.state.visibleItem == 'why') ? this.renderBenefitsWhySection(this.state.visibleItem) : null }
-        { this.state.visibleItem == 'testimonials' ? <Testimonials /> : null }
-        { this.state.visibleItem == 'ph-services' ? <PH /> : null }
-        { this.state.visibleItem == 'contact' ? <Contact /> : null }
+        { this.renderSubsection(this.state.visItem) }
       </section>
     )
   }

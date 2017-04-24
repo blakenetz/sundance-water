@@ -25,7 +25,8 @@ class MobileNav extends Component {
   }
 
   handleMenuClick(e){
-    console.log(e.target)
+    e.persist()
+    this.props.onChangeNavItem(e.target.dataset);
   }
 
   toggleNav(){
@@ -45,11 +46,11 @@ class MobileNav extends Component {
         </div>
 
         <div className="nav-right nav-menu" onClick={this.handleMenuClick}>
-          <a className="nav-item">Benefits</a>
-          <a className="nav-item">Why Kinetico</a>
-          <a className="nav-item">Testimonials</a>
-          <a className="nav-item">Plumbing and Heating</a>
-          <a className="nav-item">Contact</a>
+          <a className="nav-item" data-navitem="benefits">Benefits</a>
+          <a className="nav-item" data-navitem="why">Why Kinetico</a>
+          <a className="nav-item" data-navitem="testimonials">Testimonials</a>
+          <a className="nav-item" data-navitem="ph-services">Plumbing and Heating</a>
+          <a className="nav-item" data-navitem="contact">Contact</a>
         </div>
 
         <span className="nav-toggle" onClick={this.handleBurgerClick}>
