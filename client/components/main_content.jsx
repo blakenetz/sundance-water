@@ -11,7 +11,7 @@ class MainContent extends Component {
     this.state = { visItem: this.props.visItem }
   }
 
-  componentWillReceiveProps(){
+  componentWillReceiveProps(props){
     const navMap = this.returnNavMap();
     this.setState((prevState, currProps) => {
       return { ...prevState, visItem: currProps.visItem };
@@ -26,7 +26,7 @@ class MainContent extends Component {
   renderNav(){
     const navMap = this.returnNavMap();
     return navMap.map((navItem, i) => {
-      let classes = this.state.visItem == navItem.alias
+      let classes = (this.state.visItem == navItem.alias)
         ? "subtitle is-3 nav-item active"
         : "subtitle is-3 nav-item"
 

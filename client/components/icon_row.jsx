@@ -21,7 +21,8 @@ class IconRow extends Component {
     });
   }
 
-  handleClick(data){
+  handleClick(data, e){
+    e.stopPropagation()
     this.setState({
       targetSubSection: data.alias,
       targetId: data.id

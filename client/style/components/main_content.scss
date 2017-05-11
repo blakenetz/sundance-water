@@ -79,6 +79,7 @@
   }
   & img{
     max-width: 150px;
+    cursor: pointer;
 
     @media (max-width: 685px) {
       max-width: 120px;

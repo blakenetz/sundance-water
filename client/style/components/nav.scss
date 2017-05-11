@@ -6,14 +6,11 @@
     position: fixed;
     top: 0;
     width: 100vw;
-
   }
 }
 #mobile-logo{
-  @media (max-width: 600px) {
-    height: 50px;
-    width: auto;
-  }
+  height: 50px;
+  width: auto;
 }
 
 .nav:not(.mobile-nav){

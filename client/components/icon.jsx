@@ -15,9 +15,7 @@ class Icon extends Component {
     return (
       <section className="icon-wrapper column is-one-quarter" onClick={this.props.onClick} >
         <figure className={css(styles.BounceIn)} >
-          <a href={"/#" + this.props.alias}>
-            <img src={"/images/" + this.props.alias + "-icon.png"} alt={this.props.alt} />
-          </a>
+          <img src={"/images/" + this.props.alias + "-icon.png"} alt={this.props.alt} />
         </figure>
         <h2 className={h2Class}>{this.props.name}</h2>
       </section>
