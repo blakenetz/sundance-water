@@ -33,6 +33,28 @@
     width: 75vw;
     display: flex;
     justify-content: space-around;
+
+    @media (max-width: 600px) {
+      width: 90vw;
+    }
+
+    .subtitle {
+      @media (max-width: 795px) {
+        font-size: $font-large-x;
+      }
+      @media (max-width: 685px) {
+        font-size: $font-large;
+      }
+      @media (max-width: 615px) {
+        font-size: $font-medium;
+      }
+      @media (max-width: 550px) {
+        font-size: $font-small;
+      }
+      @media (max-width: 495px) {
+        font-size: $font-small-x;
+      }
+    }
   }
 
   figure{
@@ -59,19 +81,19 @@
     }
 
     @media (max-width: 795px) {
-      font-size: 1.8em;
+      font-size: $font-large-x;
     }
     @media (max-width: 685px) {
-      font-size: 1.6em;
+      font-size: $font-large;
     }
     @media (max-width: 615px) {
-      font-size: 1.4em;
+      font-size: $font-medium;
     }
     @media (max-width: 550px) {
-      font-size: 1.25em;
+      font-size: $font-small;
     }
     @media (max-width: 495px) {
-      font-size: 0.95em;
+      font-size: $font-small-x;
     }
   }
   & figure {
@@ -88,5 +110,4 @@
       max-width: 90px;
     }
   }
-  
 }

@@ -10,7 +10,7 @@ class Testimonials extends Component {
     return testimonials.map((testimonial, i) => {
       return (
         <article className="testimonial container columns"  key={i}>
-          <figure className="column is-2">
+          <figure className="column">
             <img src={"/images/" + testimonial.alias + "-testimonial.jpg"} alt={testimonial.customer + " family"} />
           </figure>
           <dl className="column quote">

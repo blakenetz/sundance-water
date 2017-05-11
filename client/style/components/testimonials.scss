@@ -1,13 +1,13 @@
 .info-block {
   background: $blue-light;
   margin-top: -10px;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 60px 10%;
 
   .testimonial {
     padding-bottom: 1.5em;
+    @media (max-width: 768px){
+      display: inline-flex;
+    }
 
     .quote {
       display: flex;
@@ -21,8 +21,12 @@
   }
 
   figure {
-    max-width: 250px;
     @include flex-center;
+    max-width: 250px;
+    @media (max-width: 768px){
+      max-width: 120px;
+      align-items: initial;
+    }
 
     .subtitle{
       margin-bottom: 0px;
