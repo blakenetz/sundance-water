@@ -11,7 +11,7 @@ class MobileNav extends Component {
 
   componentWillReceiveProps(){
     if (window.innerWidth > 600) return;
-    
+
     this.setState((prevState, currProps) => {
       if (currProps.dismissNav) {
         let menu = document.querySelector(".nav-menu");
