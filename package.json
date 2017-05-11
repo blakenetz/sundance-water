@@ -29,7 +29,6 @@
     "bulma": "^0.3.1",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
-    "fs": "0.0.1-security",
     "node-sass": "^3.10.1",
     "react": "^15.3.2",
     "react-animations": "^0.1.0",
@@ -46,6 +45,8 @@
     "debug": "^2.6.2",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
+    "fs": "0.0.1-security",
+    "javascript-debounce": "^1.0.0",
     "morgan": "^1.8.1",
     "nodemailer": "^3.1.8",
     "serve-favicon": "^2.4.1"

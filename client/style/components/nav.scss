@@ -1,5 +1,19 @@
 .mobile-nav {
   display: none;
+  @media (max-width: 600px) {
+    font: $header;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+  }
+}
+#mobile-logo{
+  @media (max-width: 600px) {
+    height: 50px;
+    width: auto;
+  }
 }
 
 .nav:not(.mobile-nav){
@@ -8,6 +22,25 @@
   justify-content: space-around;
   margin-bottom: 10px !important;
   border-bottom: 5px solid #000;
+  @media (max-width: 960px) {
+    max-width: 769px;
+    margin: 0 auto;
+  }
+  @media (max-width: 600px) {
+    display: none;
+  }
+
+  .subtitle {
+    @media (max-width: 1192px) {
+      font-size: 1.75rem;
+    }
+    @media (max-width: 960px) {
+      font-size: 1.3rem;
+    }
+    @media (max-width: 769px) {
+      font-size: 1rem;
+    }
+  }
 
   .block:not(:last-child), .notification:not(:last-child), .progress:not(:last-child), .subtitle:not(:last-child), .table, .title:not(:last-child){
     margin-bottom: 0px;
@@ -21,45 +54,5 @@
   }
   .navItem:not(.active){
     border-bottom: 5px solid #000;
-  }
-}
-@media (max-width: 1192px) {
-  .nav:not(.mobile-nav) {
-    .subtitle {
-      font-size: 1.75rem;
-    }
-  }
-}
-@media (max-width: 960px) {
-  .nav:not(.mobile-nav) {
-    max-width: 769px;
-    margin: 0 auto;
-    .subtitle{
-      font-size: 1.3rem;
-    }
-  }
-}
-@media (max-width: 769px) {
-  .nav:not(.mobile-nav) {
-    .subtitle{
-      font-size: 1rem;
-    }
-  }
-}
-@media (max-width: 600px) {
-  .nav:not(.mobile-nav) {
-    display: none;
-  }
-  .mobile-nav {
-    font: $header;
-    display: flex;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-
-    #mobile-logo{
-      height: 50px;
-      width: auto;
-    }
   }
 }

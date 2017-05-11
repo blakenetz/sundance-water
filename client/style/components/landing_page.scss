@@ -4,6 +4,10 @@
   #logo{
     height: 80px;
     width: auto;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 
   .landing-page-inner{
@@ -18,6 +22,14 @@
       color: white;
       font-family: $main;
       font-weight: 400;
+
+      @media (max-width: 769px) {
+        padding-left: 1rem;
+        &.title {
+          font-size: 2rem;
+          text-shadow: 0.1rem 0.1rem 0.1rem black;
+        }
+      }
     }
 
     .landing-request {
@@ -28,22 +40,5 @@
         text-decoration: underline;
       }
     }
-  }
-}
-
-@media (max-width: 769px) {
-  .landing-page-inner {
-    .landing-text {
-      padding-left: 1rem;
-      &.title {
-        font-size: 2rem;
-        text-shadow: 0.1rem 0.1rem 0.1rem black;
-      }
-    }
-  }
-}
-@media (max-width: 600px) {
-  #logo{
-    display: none;
   }
 }

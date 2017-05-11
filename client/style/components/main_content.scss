@@ -8,15 +8,15 @@
   display: flex !important;
   text-align: left;
 
-	footer{
-		text-align: right;
-		padding-top: 30px;
+  footer{
+    text-align: right;
+    padding-top: 30px;
     width: 90vw;
     max-width: 1200px;
-	}
-	.list-item{
-		margin-left: 30px;
-	}
+  }
+  .list-item{
+    margin-left: 30px;
+  }
 
   & h2 {
     padding-top: 20px;
@@ -49,7 +49,7 @@
 .icon-wrapper {
   background: $blue-light;
 
-  & h2 {
+  & h2.title {
     text-align: center;
     padding-bottom: 25px;
 
@@ -58,47 +58,33 @@
       font-weight: bold;
     }
 
+    @media (max-width: 795px) {
+      font-size: 1.8em;
+    }
+    @media (max-width: 685px) {
+      font-size: 1.6em;
+    }
+    @media (max-width: 615px) {
+      font-size: 1.4em;
+    }
+    @media (max-width: 550px) {
+      font-size: 1.25em;
+    }
+    @media (max-width: 495px) {
+      font-size: 0.95em;
+    }
   }
   & figure {
     @include flex-center;
   }
   & img{
-	  max-width: 150px;
-  }
-}
+    max-width: 150px;
 
-@media (max-width: 795px) {
-  .icon-wrapper h2.title {
-    font-size: 1.8em;
-  }
-}
-@media (max-width: 685px) {
-  .icon-wrapper {
-    img {
+    @media (max-width: 685px) {
       max-width: 120px;
     }
-    h2.title {
-      font-size: 1.6em;
-    }
-  }
-}
-@media (max-width: 615px) {
-  .icon-wrapper h2.title {
-      font-size: 1.4em;
-  }
-}
-@media (max-width: 550px) {
-  .icon-wrapper h2.title {
-      font-size: 1.25em;
-  }
-}
-@media (max-width: 495px) {
-  .icon-wrapper {
-    img {
+    @media (max-width: 495px) {
       max-width: 90px;
-    }
-    h2.title {
-      font-size: 0.95em;
     }
   }
 }
