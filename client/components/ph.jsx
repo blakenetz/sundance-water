@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import jump from 'jump.js'
 
 class PH extends Component {
+
+  componentDidMount(){
+    jump('.info-block')
+  }
+
   render(){
     return (
       <article className="info-block">

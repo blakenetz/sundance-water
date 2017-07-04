@@ -12,7 +12,7 @@ class App extends Component {
     super(props)
     this.state = {
       dismissNav: false,
-      visItem: 'benefits',
+      visItem: null,
     }
     this.handleClick = this.handleClick.bind(this)
     this.changeVisItem = this.changeVisItem.bind(this)

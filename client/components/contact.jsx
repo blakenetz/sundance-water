@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import jump from 'jump.js'
 
 import Required from './form_helpers/required';
 import ReferenceOther from './form_helpers/ref_other';
@@ -31,6 +32,10 @@ class Contact extends Component {
     this.handleBlur = this.handleBlur.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount(){
+    jump('.control')
   }
 
   handleBlur(e){

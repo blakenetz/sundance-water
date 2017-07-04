@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import jump from 'jump.js'
 
 class Testimonials extends Component {
+
+  componentDidMount(){
+    jump('.testimonial')
+  }
 
   createMarkup(htmlString){
     return {__html: htmlString};

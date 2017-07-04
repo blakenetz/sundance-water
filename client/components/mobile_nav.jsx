@@ -47,12 +47,12 @@ class MobileNav extends Component {
           </figure>
         </div>
 
-        <div className="nav-right nav-menu" onClick={this.handleMenuClick}>
-          <a className="nav-item" data-navitem="benefits">Benefits</a>
-          <a className="nav-item" data-navitem="why">Why Kinetico</a>
-          <a className="nav-item" data-navitem="testimonials">Testimonials</a>
-          <a className="nav-item" data-navitem="ph-services">Plumbing and Heating</a>
-          <a className="nav-item" data-navitem="contact">Contact</a>
+        <div className="nav-right nav-menu" onClick={this.handleMenuClick} role="navigation">
+          <div className="nav-item clickable" data-navitem="benefits" role="menuitem">Benefits</div>
+          <div className="nav-item clickable" data-navitem="why" role="menuitem">Why Kinetico</div>
+          <div className="nav-item clickable" data-navitem="testimonials" role="menuitem">Testimonials</div>
+          <div className="nav-item clickable" data-navitem="ph-services" role="menuitem">Plumbing and Heating</div>
+          <div className="nav-item clickable" data-navitem="contact" role="menuitem">Contact</div>
         </div>
 
         <span className="nav-toggle" onClick={this.handleBurgerClick}>

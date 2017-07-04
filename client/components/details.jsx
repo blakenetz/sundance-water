@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import jump from 'jump.js'
 
 class ContentDetails extends Component {
   constructor(props){
@@ -10,6 +11,10 @@ class ContentDetails extends Component {
     this.setState((previousState, currentProps) => {
       return { ...previousState, VisibleElement: currentProps.alias };
     });
+  }
+
+  componentDidMount(){
+    jump('.details')
   }
 
   createMarkup(htmlString){

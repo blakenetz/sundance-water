@@ -32,7 +32,7 @@ class LandingPage extends Component {
               Learn how purified water can improve your life.
             </h2>
             <h3 className="landing-text title is-2">Scroll down to learn more</h3>
-            <h4 className="landing-request title is-2"><a href="#contact">Or request your <span className="accent">free quote</span> now</a></h4>
+            <h4 className="landing-request title is-2"><span className="clickable" role="link">Or request your <span className="accent">free quote</span> now</span></h4>
           </div>
         </div>
       </div>

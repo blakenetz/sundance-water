@@ -98,6 +98,7 @@
   }
   & figure {
     @include flex-center;
+    overflow: hidden;
   }
   & img{
     max-width: 150px;

@@ -34,7 +34,7 @@
 
     .landing-request {
       @extend .landing-text;
-      a {
+      .clickable {
         color: white;
         font-family: $main;
         text-decoration: underline;

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Scroll from 'react-scroll';
+import jump from 'jump.js'
 
 import IconRow from './icon_row';
 import Testimonials from './testimonials';
@@ -34,7 +36,7 @@ class MainContent extends Component {
         <h2 className={classes}
             key={i}
             onClick={this.handleClick.bind(this, navItem)} >
-          <a href={"#"+navItem.alias}>{navItem.name}</a>
+          <span className="clickable" role="link">{navItem.name}</span>
         </h2>
       )
     });

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import jump from 'jump.js'
 
 import Icon from './icon';
 import Details from './details';
@@ -19,6 +20,10 @@ class IconRow extends Component {
     this.setState((previousState, currentProps) => {
       return { ...previousState, targetSection: currentProps.section };
     });
+  }
+
+  componentDidMount(){
+    jump('.icon-wrapper', {duration: 2000})
   }
 
   handleClick(data, e){
