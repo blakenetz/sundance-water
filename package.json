@@ -36,6 +36,7 @@
     "react-dom": "^15.3.2",
     "react-motion": "^0.4.7",
     "react-scroll": "^1.5.2",
+    "react-sticky": "^6.0.1",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
