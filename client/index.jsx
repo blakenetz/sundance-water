@@ -31,7 +31,7 @@ class App extends Component {
       <div onClick={this.handleClick}>
         <MobileNav dismissNav={this.state.dismissNav} onChangeNavItem={this.changeVisItem} />
         <LandingPage />
-        <MainContent visItem={this.state.visItem} />
+          <MainContent visItem={this.state.visItem} />
       </div>
     );
   }

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Scroll from 'react-scroll';
-import jump from 'jump.js'
 
 import IconRow from './icon_row';
 import Testimonials from './testimonials';
@@ -10,6 +8,7 @@ import Contact from './contact';
 class MainContent extends Component {
   constructor(props) {
     super(props)
+    this.handleScroll = this.handleScroll.bind(this)
     this.state = { visItem: this.props.visItem }
   }
 
@@ -19,6 +18,24 @@ class MainContent extends Component {
       return { ...prevState, visItem: currProps.visItem };
     });
   }
+
+  componentDidMount() {
+    document.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    const nav = document.querySelector('.nav.container')
+    ,     mainBody = document.querySelector('.main-content').getBoundingClientRect()
+    ,     navPosition = nav.getBoundingClientRect()
+
+    if (navPosition.top <= 0) nav.classList.add('sticky')
+    if (mainBody.top >= 0) nav.classList.remove('sticky')
+  }
+
 
   handleClick(navItem, e){
     e.stopPropagation()

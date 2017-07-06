@@ -19,6 +19,15 @@ body {
   cursor: pointer;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: initial;
+  z-index: 5;
+}
+
 dl {
   width: 90vw;
 }
