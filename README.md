@@ -11,7 +11,8 @@ Specs:
   * Nodemail
   * Extract-text-webpack-plugin
   * Bulma
-  * Aphrodite, React Animations, React Motion
+  * Aphrodite, React Animations
+  * Jump.js
 
 To install / run / buil:
   * $ npm install

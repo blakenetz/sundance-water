@@ -68,9 +68,16 @@
   }
 }
 
-.icon-wrapper {
-  background: $blue-light;
+.icon-detail-row{
+  background: -moz-linear-gradient(120deg, $blue-light-start, $blue-light-end);
+  background: -webkit-gradient(linear, 120deg, $blue-light-start, $blue-light-end);
+  background: -webkit-linear-gradient(120deg, $blue-light-start, $blue-light-end);
+  background: -o-linear-gradient(120deg, $blue-light-start, $blue-light-end);
+  background: -ms-linear-gradient(120deg, $blue-light-start, $blue-light-end);
+  background: linear-gradient(120deg, $blue-light-start, $blue-light-end);
+}
 
+.icon-wrapper {
   & h2.title {
     text-align: center;
     padding-bottom: 25px;

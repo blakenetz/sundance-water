@@ -32,7 +32,7 @@ class MainContent extends Component {
     ,     mainBody = document.querySelector('.main-content').getBoundingClientRect()
     ,     navPosition = nav.getBoundingClientRect()
 
-    if (navPosition.top <= 0) nav.classList.add('sticky')
+    if (navPosition.top <= 0 && this.state.visItem != 'contact') nav.classList.add('sticky')
     if (mainBody.top >= 0) nav.classList.remove('sticky')
   }
 

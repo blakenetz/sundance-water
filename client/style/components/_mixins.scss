@@ -7,7 +7,12 @@
 
 @mixin detail-section {
   font-family: $main;
-  background: $blue-dark;
   box-shadow: inset 0 1px 15px black;
   padding-top: 50px !important;
+  background: -moz-linear-gradient(120deg, $blue-dark-start, $blue-dark-end);
+  background: -webkit-gradient(linear, 120deg, $blue-dark-start, $blue-dark-end);
+  background: -webkit-linear-gradient(120deg, $blue-dark-start, $blue-dark-end);
+  background: -o-linear-gradient(120deg, $blue-dark-start, $blue-dark-end);
+  background: -ms-linear-gradient(120deg, $blue-dark-start, $blue-dark-end);
+  background: linear-gradient(120deg, $blue-dark-start, $blue-light-end);
 }

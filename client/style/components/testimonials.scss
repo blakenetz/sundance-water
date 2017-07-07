@@ -1,5 +1,10 @@
 .info-block {
-  background: $blue-light;
+  background: -moz-linear-gradient(120deg, $blue-light-start, $blue-light-end);
+  background: -webkit-gradient(linear, 120deg, $blue-light-start, $blue-light-end);
+  background: -webkit-linear-gradient(120deg, $blue-light-start, $blue-light-end);
+  background: -o-linear-gradient(120deg, $blue-light-start, $blue-light-end);
+  background: -ms-linear-gradient(120deg, $blue-light-start, $blue-light-end);
+  background: linear-gradient(120deg, $blue-light-start, $blue-light-end);
   margin-top: -10px;
   padding: 60px 10%;
 
