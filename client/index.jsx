@@ -19,6 +19,7 @@ class App extends Component {
   }
 
   changeVisItem(newItem){
+    console.log(newItem)
     this.setState({ visItem: newItem.navitem });
   }
 
@@ -30,7 +31,7 @@ class App extends Component {
     return (
       <div onClick={this.handleClick}>
         <MobileNav dismissNav={this.state.dismissNav} onChangeNavItem={this.changeVisItem} />
-        <LandingPage />
+        <LandingPage onClickItem={this.changeVisItem} />
           <MainContent visItem={this.state.visItem} />
       </div>
     );

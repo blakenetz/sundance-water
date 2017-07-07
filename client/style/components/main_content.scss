@@ -81,6 +81,7 @@
   & h2.title {
     text-align: center;
     padding-bottom: 25px;
+    word-break: keep-all;
 
     &.active{
       text-decoration: underline;
