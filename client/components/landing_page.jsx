@@ -34,10 +34,10 @@ class LandingPage extends Component {
         <div className={"landing-page-inner " + css(styles.fadeIn)}>
           <div className="landing-text-wrapper">
             <h2 className="landing-text title is-2">
-              <span className="accent clickable" onClick={this.handleClick} data-navitem="benefits" data-subnavitem="" role="link">Water</span> is the secret to good&nbsp;
-              <span className="accent clickable" onClick={this.handleClick} data-navitem="benefits" data-subnavitem="health" role="link">health</span>, glowing&nbsp;
-              <span className="accent clickable" onClick={this.handleClick} data-navitem="benefits" data-subnavitem="touch" role="link">skin</span>, and delicious&nbsp;
-              <span className="accent clickable" onClick={this.handleClick} data-navitem="benefits" data-subnavitem="taste" role="link">food</span>.
+              <span className="accent">Water</span> is the secret to good&nbsp;
+              <span className="accent">health</span>, glowing&nbsp;
+              <span className="accent">skin</span>, and delicious&nbsp;
+              <span className="accent">food</span>.
               Learn how purified water can improve your life.
             </h2>
             <h3 className="landing-text title is-2">Scroll down to learn more</h3>
