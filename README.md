@@ -2,7 +2,7 @@
 
 Source code for the Sundance Water (a Kinetico Water Systems dealer) website.
 
-Currently hosted [here!](https://radiant-peak-74765.herokuapp.com)
+😢Unfortunately this project was abondonded when the company changed owners 😢
 
 Specs:
   * React
